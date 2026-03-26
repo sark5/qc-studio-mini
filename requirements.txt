@@ -1,0 +1,6 @@
+streamlit
+nibabel
+pandas
+matplotlib
+groq
+python-dotenv
