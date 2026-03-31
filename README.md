@@ -240,6 +240,12 @@ OPENAI_API_KEY=your_api_key_here
 
 ---
 
+## Community Interaction
+
+- Shared prototype in discussion group
+- Reached out to mentors via email
+- Documented development challenges and learnings
+
 ## 🤝 Contributing
 
 Feel free to:
