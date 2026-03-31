@@ -280,4 +280,4 @@ For best results:
 
 ---
 
-Happy QC’ing! 🧠✨
+Happy QC’ing! 
