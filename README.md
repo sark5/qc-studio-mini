@@ -1,11 +1,11 @@
-# 🧠 QC-Studio Mini
+#  QC-Studio Mini
 
 A lightweight **MRI Quality Control (QC) web app** built with Streamlit.
 It allows users to upload MRI scans, visualize slices interactively, analyze quality metrics, and generate AI-powered explanations.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```bash
 qc-studio-mini/
@@ -37,9 +37,9 @@ qc-studio-mini/
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🧠 MRI Visualization
+###  MRI Visualization
 
 * Supports `.nii` and `.nii.gz` files
 * Multi-axis viewing:
@@ -51,12 +51,12 @@ qc-studio-mini/
 * Optional normalization
 * Two viewers:
 
-  * 📊 Matplotlib (static)
-  * 🌐 Niivue (interactive)
+  *  Matplotlib (static)
+  *  Niivue (interactive)
 
 ---
 
-### 📊 Quality Control
+###  Quality Control
 
 * Computes:
 
@@ -69,7 +69,7 @@ qc-studio-mini/
 
 ---
 
-### 📈 IQM Support
+###  IQM Support
 
 * Upload `.tsv` IQM files
 * Display structured table
@@ -77,7 +77,7 @@ qc-studio-mini/
 
 ---
 
-### 📄 Metadata Viewer
+###  Metadata Viewer
 
 * Dimensions
 * Voxel spacing
@@ -86,7 +86,7 @@ qc-studio-mini/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone the repo
 
@@ -111,7 +111,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 Typical dependencies:
 
@@ -126,7 +126,7 @@ python-dotenv
 
 ---
 
-## ▶️ Run the App
+##  Run the App
 
 ```bash
 streamlit run app.py
@@ -140,9 +140,9 @@ http://localhost:8501
 
 ---
 
-## 🧩 Module Breakdown
+##  Module Breakdown
 
-### 🔹 `app.py`
+###  `app.py`
 
 Main entry point:
 
@@ -152,7 +152,7 @@ Main entry point:
 
 ---
 
-### 🔹 `components/`
+###  `components/`
 
 Reusable UI pieces:
 
@@ -161,7 +161,7 @@ Reusable UI pieces:
 
 ---
 
-### 🔹 `loaders/`
+###  `loaders/`
 
 Data ingestion layer:
 
@@ -170,7 +170,7 @@ Data ingestion layer:
 
 ---
 
-### 🔹 `panels/`
+###  `panels/`
 
 Visualization modules:
 
@@ -178,7 +178,7 @@ Visualization modules:
 
 ---
 
-### 🔹 `services/`
+###  `services/`
 
 Core logic / AI:
 
@@ -186,7 +186,7 @@ Core logic / AI:
 
 ---
 
-### 🔹 `utils/`
+###  `utils/`
 
 Helper utilities:
 
@@ -198,7 +198,7 @@ Helper utilities:
 
 ---
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 Create a `.env` file if using LLM APIs:
 
@@ -208,7 +208,7 @@ OPENAI_API_KEY=your_api_key_here
 
 ---
 
-## 📊 Workflow
+##  Workflow
 
 1. Upload MRI file
 2. (Optional) Upload IQM file
@@ -222,7 +222,7 @@ OPENAI_API_KEY=your_api_key_here
 
 ---
 
-## ⚠️ Notes
+##  Notes
 
 * Temporary MRI files are created during runtime and deleted automatically
 * Niivue viewer may fail in some environments (handled gracefully)
@@ -230,7 +230,7 @@ OPENAI_API_KEY=your_api_key_here
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 * 3D volume rendering
 * Advanced QC metrics (SNR, motion artifacts)
@@ -246,7 +246,7 @@ OPENAI_API_KEY=your_api_key_here
 - Reached out to mentors via email
 - Documented development challenges and learnings
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to:
 
@@ -256,13 +256,13 @@ Feel free to:
 
 ---
 
-## 📜 License
+##  License
 
 MIT License
 
 ---
 
-## 🙌 Acknowledgements
+##  Acknowledgements
 
 * Streamlit
 * NiBabel
@@ -271,7 +271,7 @@ MIT License
 
 ---
 
-## 💡 Pro Tip
+##  Pro Tip
 
 For best results:
 
