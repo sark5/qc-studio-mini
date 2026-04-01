@@ -1,6 +1,7 @@
 streamlit
 nibabel
-pandas
+numpy
 matplotlib
-groq
+pandas
 python-dotenv
+groq
