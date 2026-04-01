@@ -90,7 +90,7 @@ qc-studio-mini/
 │
 └── README.md
 
-🚀 Installation
+### 🚀 Installation
 
 Clone the repository:
 git clone https://github.com/your-username/qc-studio-mini.git
