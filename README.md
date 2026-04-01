@@ -203,7 +203,7 @@ Helper utilities:
 Create a `.env` file if using LLM APIs:
 
 ```env
-OPENAI_API_KEY=your_api_key_here
+GROQ_API_KEY=your_api_key_here
 ```
 
 ---
