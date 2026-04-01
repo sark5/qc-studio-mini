@@ -93,12 +93,12 @@ qc-studio-mini/
 ---
 ```
 
-### 🚀 Installation
+## 🚀 Installation
 
-Clone the repository:
-git clone https://github.com/your-username/qc-studio-mini.git
-cd qc-studio-mini
-Create a virtual environment:
+-Clone the repository:
+-git clone https://github.com/your-username/qc-studio-mini.git
+-cd qc-studio-mini
+-Create a virtual environment:
 
 Windows:
 
