@@ -90,7 +90,7 @@ qc-studio-mini/
 │
 └── README.md
 
- ## 🚀 Installation
+ # 🚀 Installation
 1) Clone the repository
 git clone https://github.com/your-username/qc-studio-mini.git
 cd qc-studio-mini
@@ -103,7 +103,7 @@ python -m venv venv
 source venv/bin/activate
 3) Install dependencies
 pip install -r requirements.txt
-## 🔐 Environment Variables
+# 🔐 Environment Variables
 
 If you want to use AI explanations via Groq, create a .env file in the project root:
 
@@ -111,13 +111,13 @@ GROQ_API_KEY=your_api_key_here
 
 If no valid API key is provided, the app will still run using a fallback rule-based explanation system.
 
-## ▶️ Run the App
+# ▶️ Run the App
 streamlit run app.py
 
 Then open in your browser:
 
 http://localhost:8501
-## 🧭 How to Use
+# 🧭 How to Use
 Step 1 — Upload MRI File
 
 Upload a .nii or .nii.gz MRI scan from the sidebar.
