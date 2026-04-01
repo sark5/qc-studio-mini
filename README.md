@@ -1,82 +1,99 @@
 # 🧠 QC-Studio Mini
 
-![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+### ⚡ AI-Powered MRI Quality Control for Research Workflows
 
-A lightweight **MRI Quality Control (QC)** web application built with **Streamlit** for fast visual inspection, quality analysis, metadata review, and AI-assisted explainability.
-
-QC-Studio Mini is designed as a **simple, modular, and extensible neuroimaging QC tool** for research workflows.
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![AI](https://img.shields.io/badge/AI-Enabled-purple)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## ✨ Features
+## 🚀 Overview
+
+**QC-Studio Mini** is a lightweight, modular, and AI-assisted **MRI Quality Control platform** designed for fast inspection, explainable metrics analysis, and research-grade workflows.
+
+Unlike heavy clinical systems, it focuses on:
+
+* ⚡ Speed
+* 🧠 Explainability
+* 🧩 Modularity
+* 🔬 Research usability
+
+---
+
+## ✨ Key Highlights
 
 ### 🧠 MRI Visualization
 
-* Upload and inspect **NIfTI MRI scans** (`.nii`, `.nii.gz`)
-* View slices in:
+* Upload `.nii / .nii.gz` scans
+* Multiplanar viewing:
 
-  * Sagittal (X)
-  * Coronal (Y)
-  * Axial (Z)
-* Two viewer modes:
+  * Sagittal / Coronal / Axial
+* Dual modes:
 
-  * Matplotlib Viewer (static)
-  * Niivue Viewer (interactive)
+  * Static (Matplotlib)
+  * Interactive (Niivue)
 
 ---
 
-### 📊 QC Dashboard
+### 📊 Intelligent QC Dashboard
 
-* Basic MRI quality statistics:
+* Real-time statistics:
 
-  * Mean intensity
-  * Standard deviation
-  * Minimum intensity
-  * Maximum intensity
-* QC heuristics:
+  * Mean, Std, Min, Max
+* Automatic issue detection:
 
-  * Low contrast detection
-  * Possibly empty / corrupted scan detection
-* IQM (Image Quality Metrics) support via `.tsv`
+  * Low contrast
+  * Empty / corrupted scans
+* IQM support (`.tsv`)
 
 ---
 
-### 🧪 Explainability
+### 🤖 AI Explainability Engine
 
-* AI-generated explanations for MRI quality metrics
-* Row-level interpretation of IQM data
-* Supports:
+* AI-generated MRI quality interpretation
+* Row-level IQM analysis
+* Dual-mode system:
 
-  * Groq API
-  * Fallback rule-based explanations
-
----
-
-### 📄 Metadata Viewer
-
-Inspect MRI file metadata:
-
-* Dimensions
-* Voxel spacing
-* Data type
-* Affine matrix
+  * Groq API (fast AI)
+  * Rule-based fallback (offline safe)
 
 ---
 
-### 🆚 Compare Tab
+### 📄 Metadata Intelligence
 
-* Compare two IQM rows
-* Metric differences
-* Quick summary
+* Dimensions & voxel spacing
+* Data type & affine matrix
+* Quick structural insights
 
 ---
 
-### ⬇️ Export
+### 🆚 Smart Comparison
 
-* Export QC summary as CSV
-* Export IQM table
+* Compare scans / IQM rows
+* Highlight metric differences
+* Fast decision support
+
+---
+
+### ⬇️ Export System
+
+* QC summary (CSV)
+* IQM data export
+* Research-ready outputs
+
+---
+
+## 🧩 Why QC-Studio Mini?
+
+| Feature           | QC-Studio Mini    | Competitor   |
+| ----------------- | ----------------- | ------------ |
+| Simplicity        | ✅ Clean & focused | ❌ Overloaded |
+| Speed             | ⚡ Fast            | ⚠️ Heavy     |
+| AI Explainability | ✅ Built-in        | ✅            |
+| Modular Code      | ✅ Clear structure | ⚠️ Complex   |
+| Beginner Friendly | ✅ Yes             | ❌ No         |
 
 ---
 
@@ -86,79 +103,37 @@ Inspect MRI file metadata:
 qc-studio-mini/
 │
 ├── app.py
-├── requirements.txt
-├── .env
-│
 ├── components/
-│   ├── uploader.py
-│   └── iqm_table.py
-│
 ├── loaders/
-│   ├── mri_loader.py
-│   └── iqm_loader.py
-│
 ├── panels/
-│   ├── viewer_panel.py
-│   ├── qc_panel.py
-│   ├── explainability_panel.py
-│   ├── metadata_panel.py
-│   ├── compare_panel.py
-│   ├── export_panel.py
-│   └── niivue_panel.py
-│
 ├── services/
-│   └── llm_explainer.py
-│
 ├── utils/
-│   └── image_utils.py
-│
 └── README.md
 ```
 
 ---
 
-## 🚀 Installation
-
-### 1. Clone the Repository
+## ⚙️ Installation
 
 ```bash
 git clone https://github.com/your-username/qc-studio-mini.git
 cd qc-studio-mini
-```
 
-### 2. Create Virtual Environment
-
-#### Windows
-
-```bash
 python -m venv venv
-venv\Scripts\activate
-```
+source venv/bin/activate   # or venv\Scripts\activate (Windows)
 
-#### macOS / Linux
-
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🔐 Environment Variables
-
-Create a `.env` file in the root directory:
+## 🔐 Environment Setup
 
 ```env
 GROQ_API_KEY=your_api_key_here
 ```
 
-If no API key is provided, the app will still run using a fallback explanation system.
+No API? No problem — fallback mode works ✅
 
 ---
 
@@ -168,138 +143,68 @@ If no API key is provided, the app will still run using a fallback explanation s
 streamlit run app.py
 ```
 
-Open in browser:
-
-```
-http://localhost:8501
-```
+Open → http://localhost:8501
 
 ---
 
-## 🧭 How to Use
+## 🧭 Workflow
 
-### Step 1 — Upload MRI File
+### 1️⃣ Upload Data
 
-Upload a `.nii` or `.nii.gz` file.
+* MRI (`.nii`)
+* IQM (`.tsv`)
 
-### Step 2 — Upload IQM File (Optional)
+### 2️⃣ Analyze
 
-Upload `.tsv` file with metrics:
+* Visual inspection
+* QC dashboard
+* AI explanation
 
-```
-snr, cnr, efc, fwhm, motion
-```
+### 3️⃣ Decide
 
-### Step 3 — Explore Tabs
+* Compare scans
+* Review metrics
 
-#### 🧠 Viewer
-
-* Slice visualization
-* Axis selection
-* Normalization toggle
-
-#### 📊 QC Dashboard
-
-* Scan statistics
-* QC warnings
-* IQM table
-
-#### 🧪 Explainability
-
-* Select row
-* Generate AI explanation
-
-#### 📄 Metadata
-
-* Header info
-* Affine matrix
-
-#### 🆚 Compare
-
-* Compare two rows
-
-#### ⬇️ Export
+### 4️⃣ Export
 
 * Download results
 
 ---
 
-## 🧠 Module Breakdown
-
-### app.py
-
-* Main Streamlit app
-* Tab navigation
-* File handling
-
-### components/
-
-* uploader.py → File upload UI
-* iqm_table.py → IQM display
-
-### loaders/
-
-* mri_loader.py → MRI loading
-* iqm_loader.py → TSV loading
-
-### panels/
-
-* viewer_panel.py → Visualization
-* qc_panel.py → QC stats
-* explainability_panel.py → AI explanation
-* metadata_panel.py → Metadata
-* compare_panel.py → Comparison
-* export_panel.py → Export
-
-### services/
-
-* llm_explainer.py → AI logic
-
-### utils/
-
-* image_utils.py → Image processing
-
----
-
-## 📊 Example IQM TSV Format
+## 📊 Example IQM Format
 
 ```tsv
 subject_id	snr	cnr	efc	fwhm	motion
-sub-001	12.5	1.8	0.42	3.1	0.12
-sub-002	7.2	0.9	0.76	4.5	0.61
+sub-001	    12.5	1.8	0.42	3.1	    0.12
 ```
 
 ---
 
 ## ⚠️ Notes
 
-* Temporary MRI files are auto-deleted
-* Niivue may not work in all environments
 * Large MRI files may slow performance
-* AI explanations are for research, not diagnosis
+* Niivue may not work in all environments
+* AI output is **not for medical diagnosis**
 
 ---
 
-## 🚧 Future Enhancements
+## 🚧 Roadmap
 
 * PASS / WARN / FAIL scoring
-* Advanced QC heuristics
 * Batch processing
-* PDF report export
-* Multi-scan comparison
-* 3D visualization
-* MRIQC metric expansion
+* 3D rendering
+* PDF reports
+* Advanced QC heuristics
 
 ---
 
-## 🎯 Why This Project
+## 🎯 Vision
 
-QC-Studio Mini focuses on:
+To build a **lightweight, explainable, and developer-friendly MRI QC system** that bridges the gap between:
 
-* Simplicity
-* Modularity
-* Extensibility
-* Research usability
+* Heavy clinical tools ❌
+* Simple research tools ❌
+* Smart AI-assisted workflows ✅
 
 ---
 
@@ -311,10 +216,14 @@ git commit -m "Add feature"
 git push origin feature-name
 ```
 
-Then open a Pull Request 🚀
-
 ---
 
 ## 📄 License
 
 MIT License
+
+---
+
+## 🧠 Final Note
+
+QC-Studio Mini is built for **learning, research, and innovation in neuroimaging QC** — not as a replacement for clinical expertise.
