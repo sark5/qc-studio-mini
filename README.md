@@ -90,6 +90,9 @@ qc-studio-mini/
 │
 └── README.md
 
+---
+```
+
 ### 🚀 Installation
 
 Clone the repository:
