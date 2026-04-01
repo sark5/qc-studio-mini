@@ -11,103 +11,183 @@
 
 ## 🚀 Overview
 
-**QC-Studio Mini** is a lightweight, modular, and AI-assisted **MRI Quality Control platform** designed for fast inspection, explainable metrics analysis, and research-grade workflows.
+**QC-Studio Mini** is a lightweight, modular, and AI-assisted **MRI Quality Control (QC) platform** designed for fast visual inspection, quantitative analysis, and explainable decision-making.
 
-Unlike heavy clinical systems, it focuses on:
+It is built specifically for:
 
-* ⚡ Speed
-* 🧠 Explainability
-* 🧩 Modularity
-* 🔬 Research usability
+* 🧠 Neuroimaging researchers
+* 📊 MRIQC-based workflows
+* 🧪 Experimental AI-assisted QC pipelines
 
----
+Unlike heavy clinical systems, QC-Studio Mini emphasizes:
 
-## ✨ Key Highlights
-
-### 🧠 MRI Visualization
-
-* Upload `.nii / .nii.gz` scans
-* Multiplanar viewing:
-
-  * Sagittal / Coronal / Axial
-* Dual modes:
-
-  * Static (Matplotlib)
-  * Interactive (Niivue)
+* ⚡ Fast interaction
+* 🧩 Modular architecture
+* 🧠 Explainable AI outputs
+* 🔬 Research-first design
 
 ---
 
-### 📊 Intelligent QC Dashboard
+## ✨ Core Features
 
-* Real-time statistics:
+### 🧠 MRI Visualization Engine
 
-  * Mean, Std, Min, Max
-* Automatic issue detection:
+* Upload **NIfTI MRI scans** (`.nii`, `.nii.gz`)
+* Multi-planar slice visualization:
 
-  * Low contrast
-  * Empty / corrupted scans
-* IQM support (`.tsv`)
+  * Sagittal (X-axis)
+  * Coronal (Y-axis)
+  * Axial (Z-axis)
+* Dual viewing modes:
+
+  * **Matplotlib Viewer** → lightweight & stable
+  * **Niivue Viewer** → interactive & responsive
+* Slice navigation with index control
+* Optional intensity normalization
+
+---
+
+### 📊 Quality Control Dashboard
+
+Perform quick, interpretable QC checks:
+
+#### 📈 Basic Statistics
+
+* Mean intensity
+* Standard deviation
+* Minimum / Maximum values
+
+#### ⚠️ Heuristic Checks
+
+* Low contrast detection
+* Near-empty scan detection
+* Abnormal intensity distribution
+
+#### 📂 IQM Integration
+
+* Upload `.tsv` MRIQC files
+* Supports metrics such as:
+
+  * SNR (Signal-to-Noise Ratio)
+  * CNR (Contrast-to-Noise Ratio)
+  * EFC (Entropy Focus Criterion)
+  * FWHM (Smoothness)
+  * Motion parameters
 
 ---
 
 ### 🤖 AI Explainability Engine
 
-* AI-generated MRI quality interpretation
-* Row-level IQM analysis
-* Dual-mode system:
+Transform raw metrics into **human-readable insights**:
 
-  * Groq API (fast AI)
-  * Rule-based fallback (offline safe)
+* AI-generated explanations for MRI quality
+* Row-level interpretation of IQM data
+* Context-aware reasoning based on metrics
+
+#### Modes:
+
+* ⚡ **Groq API (LLM-based)** → fast inference
+* 🧠 **Rule-based fallback** → offline reliability
+
+#### Output includes:
+
+* Quality interpretation
+* Potential issues
+* Suggested actions
 
 ---
 
 ### 📄 Metadata Intelligence
 
-* Dimensions & voxel spacing
-* Data type & affine matrix
-* Quick structural insights
+Extract and display MRI header information:
+
+* Image dimensions
+* Voxel spacing
+* Data type
+* Affine transformation matrix
+
+Useful for:
+
+* Debugging pipelines
+* Understanding acquisition parameters
 
 ---
 
-### 🆚 Smart Comparison
+### 🆚 Comparison Module
 
-* Compare scans / IQM rows
-* Highlight metric differences
-* Fast decision support
+Compare two scans or IQM rows:
 
----
-
-### ⬇️ Export System
-
-* QC summary (CSV)
-* IQM data export
-* Research-ready outputs
+* Side-by-side metric comparison
+* Difference highlighting
+* Quick evaluation support
 
 ---
 
-## 🧩 Why QC-Studio Mini?
+### ⬇️ Export & Reporting
 
-| Feature           | QC-Studio Mini    | Competitor   |
-| ----------------- | ----------------- | ------------ |
-| Simplicity        | ✅ Clean & focused | ❌ Overloaded |
-| Speed             | ⚡ Fast            | ⚠️ Heavy     |
-| AI Explainability | ✅ Built-in        | ✅            |
-| Modular Code      | ✅ Clear structure | ⚠️ Complex   |
-| Beginner Friendly | ✅ Yes             | ❌ No         |
+* Export QC summary as CSV
+* Export IQM tables
+* Lightweight reporting for research workflows
+
+---
+
+## 🧩 System Architecture
+
+QC-Studio Mini follows a **modular, layered design**:
+
+```text
+UI Layer (Streamlit)
+   ↓
+Panels (Feature Modules)
+   ↓
+Loaders (Data Processing)
+   ↓
+Services (AI / Logic)
+   ↓
+Utils (Helpers)
+```
+
+### Key Principles:
+
+* Separation of concerns
+* Easy extensibility
+* Replaceable AI backend
+* Lightweight execution
 
 ---
 
 ## 📁 Project Structure
 
-```bash
+```bash id="gq1l9n"
 qc-studio-mini/
 │
-├── app.py
-├── components/
-├── loaders/
-├── panels/
-├── services/
-├── utils/
+├── app.py                  # Main Streamlit app
+├── requirements.txt
+├── .env
+│
+├── components/             # UI components
+│   ├── uploader.py
+│   └── iqm_table.py
+│
+├── loaders/                # Data loading logic
+│   ├── mri_loader.py
+│   └── iqm_loader.py
+│
+├── panels/                 # Feature modules
+│   ├── viewer_panel.py
+│   ├── qc_panel.py
+│   ├── explainability_panel.py
+│   ├── metadata_panel.py
+│   ├── compare_panel.py
+│   ├── export_panel.py
+│   └── niivue_panel.py
+│
+├── services/               # AI / business logic
+│   └── llm_explainer.py
+│
+├── utils/                  # Helper functions
+│   └── image_utils.py
+│
 └── README.md
 ```
 
@@ -115,102 +195,119 @@ qc-studio-mini/
 
 ## ⚙️ Installation
 
-```bash
+```bash id="7dn2k5"
 git clone https://github.com/your-username/qc-studio-mini.git
 cd qc-studio-mini
 
 python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate (Windows)
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🔐 Environment Setup
+## 🔐 Environment Configuration
 
-```env
+Create a `.env` file:
+
+```env id="9xj2sl"
 GROQ_API_KEY=your_api_key_here
 ```
 
-No API? No problem — fallback mode works ✅
+If no API key is provided:
+
+* The system automatically switches to fallback mode ✅
 
 ---
 
-## ▶️ Run the App
+## ▶️ Running the Application
 
-```bash
+```bash id="d5ytg0"
 streamlit run app.py
 ```
 
-Open → http://localhost:8501
+Access:
+
+```
+http://localhost:8501
+```
 
 ---
 
-## 🧭 Workflow
+## 🧭 Usage Workflow
 
-### 1️⃣ Upload Data
+### Step 1 — Upload Data
 
-* MRI (`.nii`)
-* IQM (`.tsv`)
+* MRI scan (`.nii / .nii.gz`)
+* Optional IQM file (`.tsv`)
 
-### 2️⃣ Analyze
+### Step 2 — Explore
 
-* Visual inspection
-* QC dashboard
-* AI explanation
+* Visual inspection (Viewer tab)
+* QC metrics (Dashboard tab)
 
-### 3️⃣ Decide
+### Step 3 — Analyze
 
-* Compare scans
-* Review metrics
+* Generate AI explanations
+* Identify potential issues
 
-### 4️⃣ Export
+### Step 4 — Compare
 
-* Download results
+* Compare scans or subjects
+
+### Step 5 — Export
+
+* Download QC summaries
 
 ---
 
 ## 📊 Example IQM Format
 
-```tsv
+```tsv id="kq5w6k"
 subject_id	snr	cnr	efc	fwhm	motion
-sub-001	    12.5	1.8	0.42	3.1	    0.12
+sub-001	12.5	1.8	0.42	3.1	0.12
+sub-002	7.2	0.9	0.76	4.5	0.61
 ```
 
 ---
 
-## ⚠️ Notes
+## ⚠️ Limitations
 
-* Large MRI files may slow performance
+* Not intended for clinical diagnosis
+* Performance depends on MRI size
 * Niivue may not work in all environments
-* AI output is **not for medical diagnosis**
+* AI outputs may require human validation
 
 ---
 
-## 🚧 Roadmap
+## 🚧 Future Enhancements
 
-* PASS / WARN / FAIL scoring
-* Batch processing
-* 3D rendering
-* PDF reports
+* PASS / WARN / FAIL scoring system
+* Batch processing pipeline
+* 3D volume rendering
 * Advanced QC heuristics
+* PDF report generation
+* Integration with MRIQC / BIDS pipelines
 
 ---
 
-## 🎯 Vision
+## 🎯 Design Goals
 
-To build a **lightweight, explainable, and developer-friendly MRI QC system** that bridges the gap between:
+QC-Studio Mini is built with the following principles:
 
-* Heavy clinical tools ❌
-* Simple research tools ❌
-* Smart AI-assisted workflows ✅
+* **Simplicity over complexity**
+* **Explainability over black-box AI**
+* **Modularity over monolithic design**
+* **Research usability over clinical rigidity**
 
 ---
 
 ## 🤝 Contributing
 
-```bash
+Contributions are welcome!
+
+```bash id="v1wq2m"
 git checkout -b feature-name
 git commit -m "Add feature"
 git push origin feature-name
@@ -224,6 +321,7 @@ MIT License
 
 ---
 
-## 🧠 Final Note
+## 🧠 Disclaimer
 
-QC-Studio Mini is built for **learning, research, and innovation in neuroimaging QC** — not as a replacement for clinical expertise.
+This tool is intended for **research and educational purposes only**.
+It should not be used as a substitute for professional medical diagnosis or clinical decision-making.
