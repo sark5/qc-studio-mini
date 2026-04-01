@@ -91,6 +91,7 @@ qc-studio-mini/
 └── README.md
 
 🚀 Installation
+
 Clone the repository:
 git clone https://github.com/your-username/qc-studio-mini.git
 cd qc-studio-mini
@@ -107,6 +108,7 @@ python -m venv venv
 source venv/bin/activate
 Install dependencies:
 pip install -r requirements.txt
+
 🔐 Environment Variables
 
 If you want to use AI explanations via Groq, create a .env file in the project root:
